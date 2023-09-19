@@ -15,7 +15,7 @@ typealias Mytype = Double
 var chislo: Mytype = 5.5
 
 var BoolValue: Bool = true
-if BoolValue == true {
+if boolValue {
     print("Ya molodec")
 } else {
     print("Nichuya ya ne molodec")
