@@ -14,3 +14,9 @@ var c1 = Float (a1) + a2
 typealias Mytype = Double
 var chislo: Mytype = 5.5
 
+var BoolValue: Bool = true
+if BoolValue == true {
+    print("Ya molodec")
+} else {
+    print("Nichuya ya ne molodec")
+}
