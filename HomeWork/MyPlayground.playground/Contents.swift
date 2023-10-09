@@ -176,3 +176,4 @@ if let minElement = minElement {
     print("Минимальный элемент: \(minElement)")
 }
 
+print(somearray)
