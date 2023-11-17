@@ -1,7 +1,5 @@
 import UIKit
-import Foundation
-import CoreGraphics
-import Darwin
+
 
 //Создать по 1-2 enum разных типов.
 
