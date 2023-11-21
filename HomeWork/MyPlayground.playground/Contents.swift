@@ -54,7 +54,7 @@ class Students{
     }
 }
 
-let listStudents = Students(students: ["Александр" , "Екатерина" , "Михаил" , "Ольга" , "Иван" , "Дрочеслав"])
+let listStudents = Students(students: ["Александр", "Екатерина", "Михаил", "Ольга", "Иван", "Дрочеслав"])
 
 listStudents.sortedStudent()
 
