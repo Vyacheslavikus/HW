@@ -207,7 +207,7 @@ man = nil
 // У нас есть класс мужчины и его паспорт. Мужчина может родиться и не иметь паспорта, но паспорт выдается конкретному мужчине и не может выдаваться без указания владельца. Чтобы разрешить эту проблему, ссылку на паспорт у мужчины сделаем обычной опциональной, а ссылку на владельца у паспорта – константой. Также добавим паспорту конструктор, чтобы сразу определить его владельца. Таким образом, человек сможет существовать без паспорта, сможет его поменять или выкинуть, но паспорт может быть создан только с конкретным владельцем и никогда не может его сменить. Повторить все, что на черном скрине и решить проблему соблюдая все правила!
 
 
-// мМожно вместо использования прямых ссылок на классы использовать замыкания (как раз так и переделал) , тогда класы будут обращатся только при необходимости.
+// Можно вместо использования прямых ссылок на классы использовать замыкания (как раз так и переделал) , тогда класы будут обращатся только при необходимости.
 
 class NewMan {
     var passport: (() -> Passport?)?
@@ -219,7 +219,7 @@ class NewMan {
 class Passport {
     let man: () -> NewMan
     
-    init(man: @escaping () -> NewMan) {
+    init(man: @escaping() -> NewMan) {
         self.man = man
     }
     
@@ -311,25 +311,25 @@ class FlowControl {
     
     private func loopingIfGuard(value: Int) -> FunctionResult {
         guard value > 0 else {
-            return.ifGuardResult("значение меньше нуля")
+            return .ifGuardResult("значение меньше нуля")
         }
-        return.ifGuardResult("значение больше нуля")
+        return .ifGuardResult("значение больше нуля")
     }
     
     private func loopingSwitch(value: Int) -> FunctionResult {
         switch value {
         case 1:
-            return.switchStatementResult(.one)
+            return .switchStatementResult(.one)
         case 2:
-            return.switchStatementResult(.two)
+            return .switchStatementResult(.two)
         case 3:
-            return.switchStatementResult(.three)
+            return .switchStatementResult(.three)
         case 4:
-            return.switchStatementResult(.four)
+            return .switchStatementResult(.four)
         case 5:
-            return.switchStatementResult(.five)
+            return .switchStatementResult(.five)
         default:
-            return.switchStatementResult(.noResult)
+            return .switchStatementResult(.noResult)
         }
     }
     
