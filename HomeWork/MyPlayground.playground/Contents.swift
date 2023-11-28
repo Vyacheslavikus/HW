@@ -1,5 +1,6 @@
 import UIKit
-import Foundation
+var view: UIView
+var deviceModels: [String]
 
 
 
@@ -8,26 +9,27 @@ import Foundation
 
 class Family {
     
-    var members: [String]
+    var members: [String] = ["мама", "папа", "дети"]
     
     subscript(index: Int) -> String? {
-    get{
-        switch index {
-        case 0: return members[0]
-        case 1: return members[1]
-        case 2: return members[2]
-        default: return ""
+        get {
+            guard index >= 0, index < members.count else {
+                return nil
             }
+            return members[index]
         }
-    }
-    
-    init(members:[String]) {
-        self.members = members
+        set(newValue) {
+            guard let newValue = newValue, index >= 0, index < members.count else {
+                return
+            }
+            members[index] = newValue
+        }
+        
     }
 }
 
 
-let myFamily = Family(members: ["папа"])
+let myFamily = Family()
 
 
 
